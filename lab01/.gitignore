@@ -1,0 +1,26 @@
+# Local environment and caches
+.venv
+.torch
+__pycache__/
+.pytest_cache/
+.DS_Store
+*.log
+
+# Kaggle images are not redistributed
+chest_xray
+data
+
+# Regenerated experiments and large checkpoints
+runs/
+*.pt
+*.pth
+
+
+# Not required by the Lab1 spec; kept local only
+report/
+figures/
+results/
+runs*/
+tests/
+check_setup.py
+.python-version
