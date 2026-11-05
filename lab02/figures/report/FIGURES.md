@@ -24,7 +24,7 @@ on dot plots do not start at zero, so each caption states the plotted range.
 | Report 3.b | Explain how the model is implemented | Fig. 1 |
 | Report 3.c | Explain the ELU function | Fig. 10 |
 | Report 3.d | Explain depthwise and separable convolution | Fig. 11 |
-| Report 2.d, 3.a | Anything else worth presenting | Figs. 3, 12, 13, 14, 15, 16 |
+| Report 2.d, 3.a | Anything else worth presenting | Figs. 3, 13, 14, 15, 16 |
 | Report 5, Bonus | Accuracy of DeepConvNet or another model | Figs. 17, 18 |
 
 The spec's plotting page links `seaborn.heatmap`, so a confusion-matrix heatmap
@@ -67,9 +67,7 @@ in both dropout and learning rate. Open markers are seeds. Axis range 70–90%.
 **Fig. 5** (`fig05_elu_alpha_and_slope`, double column). (a) ELU α and (b) LeakyReLU
 negative slope at the tuned baseline (5 seeds). Axis range 70–90%.
 
-**Fig. 6** (`fig06_dropout`, single column). Dropout rate at the tuned baseline
-(5 seeds). Train accuracy is measured with dropout active, which lowers it. Both
-curves are means of the last 10 epochs. Axis range 75–101%.
+**Fig. 6** (`fig06_dropout`, single column). Dropout rate at the tuned baseline (5 seeds). Train and test accuracy use the validation-selected checkpoint in eval mode. Axis range 75–101%.
 
 **Fig. 7** (`fig07_optimization`, double column). (a) Learning rate, (b) batch size,
 (c) weight decay and (d) optimizer at the tuned baseline (3 seeds). Axis range
@@ -91,10 +89,6 @@ derivative is discontinuous at zero unless α = 1.
 depthwise-separable convolution, drawn with four channels. Numbers are the weights
 in this model.
 
-**Fig. 12** (`fig12_negative_floor`, single column). Last-10 accuracy against the
-lowest output of each activation at the tuned baseline (5 seeds). This pattern was
-found after inspecting the results and shows a correlation only. Axis range 70–90%.
-
 **Fig. 13** (`fig13_subject_scope`, single column). One shared model against one
 model per subject. EEGNet values are last-10 accuracy over 5 seeds. Classical
 pipelines are single fits tuned by cross-validation on the training set.
@@ -110,8 +104,8 @@ sliding 1 s window. Both are descriptive scans read on the test set. Axis ranges
 
 **Fig. 16** (`fig16_learned_filters`, double column). (a) Frequency response of the
 16 temporal filters of the best run, each scaled to its own maximum. Dashed lines
-mark 8, 13 and 30 Hz. (b) Share of kernel power per band in the final model against
-a flat spectrum (5 seeds).
+mark 8, 13 and 30 Hz. (b) Share of power per band in the final model, against a
+flat spectrum and the input signal (5 seeds).
 
 **Fig. 17** (`fig17_bonus_comparison`, double column). (a) Learning rate for
 DeepConvNet and ShallowConvNet, (b) DeepConvNet activation, and (c) last-10 accuracy

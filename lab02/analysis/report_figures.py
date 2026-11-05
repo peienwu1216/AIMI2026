@@ -27,9 +27,13 @@ import torch.nn.functional as F  # noqa: E402
 from matplotlib.lines import Line2D  # noqa: E402
 from matplotlib.patches import FancyArrowPatch, FancyBboxPatch, Rectangle  # noqa: E402
 from scipy.stats import spearmanr  # noqa: E402
+from sklearn.model_selection import train_test_split  # noqa: E402
 
 PROJECT_DIR = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(PROJECT_DIR / "analysis"))
+sys.path.insert(0, str(PROJECT_DIR))
+import dataloader  # noqa: E402
+from models import EEGNet  # noqa: E402
 from run_analysis import BANDS, FFT_POINTS, FS, spatial_filter_summary, temporal_filter_spectra  # noqa: E402
 
 RESULTS = PROJECT_DIR / "results"
@@ -308,29 +312,50 @@ def fig05_elu_and_slope():
     save(figure, "fig05_elu_alpha_and_slope")
 
 
+def eval_mode_accuracy(run_dir, fit_x, fit_y, test_x, test_y):
+    """Train and test accuracy of the saved checkpoint with dropout switched off."""
+    config = json.loads((run_dir / "config.json").read_text())
+    model = EEGNet(activation=config["activation"], elu_alpha=config["elu_alpha"],
+                   dropout=config["dropout"], leaky_slope=config["leaky_slope"])
+    checkpoint = torch.load(run_dir / "best.pt", map_location="cpu", weights_only=True)
+    model.load_state_dict(checkpoint["model_state_dict"])
+    model.eval()
+    with torch.no_grad():
+        train = 100 * (model(fit_x).argmax(1) == fit_y).float().mean().item()
+        test = 100 * (model(test_x).argmax(1) == test_y).float().mean().item()
+    return train, test
+
+
 def fig06_dropout():
-    """Dropout sweep with the train-test gap."""
+    """Dropout sweep. Train and test share one checkpoint and the eval mode."""
     rates = (0.0, 0.1, 0.25, 0.4, 0.5, 0.6, 0.75)
     tags = ("0p0", "0p1", "0p25", "0p4", "0p5", "0p6", "0p75")
-    figure, axis = plt.subplots(figsize=(SINGLE, 2.15))
-    numeric_sweep(axis, [f"p1-dropout-d{tag}" for tag in tags], rates, VERMILLION, "s")
-    train_means = []
+    train_x, train_y, test_x, test_y = dataloader.read_bci_data()
+    indices = np.arange(len(train_y))
+    strata = (indices >= 540).astype(np.int64) * 2 + train_y.astype(np.int64)
+    fit_rows, _ = train_test_split(indices, test_size=0.2, random_state=113, stratify=strata)
+    fit_x = torch.tensor(train_x[fit_rows], dtype=torch.float32)
+    fit_y = torch.tensor(train_y[fit_rows].astype(np.int64))
+    test_x = torch.tensor(test_x, dtype=torch.float32)
+    test_y = torch.tensor(test_y.astype(np.int64))
+
+    results = {}
     for rate, tag in zip(rates, tags):
-        values = [history(path)["train_accuracy"][-10:].mean() for path in run_dirs(f"p1-dropout-d{tag}", ("raw",))]
-        train_means.append(np.mean(values))
-        axis.errorbar(rate, np.mean(values), yerr=np.std(values), fmt="o", color=BLUE, markersize=3.8,
-                      elinewidth=0.8, capsize=1.6, capthick=0.6, markeredgecolor="white",
-                      markeredgewidth=0.3, zorder=3)
-    axis.plot(rates, train_means, color=BLUE, linewidth=0.9, linestyle=(0, (3.5, 1.5)), zorder=1)
+        pairs = [eval_mode_accuracy(path, fit_x, fit_y, test_x, test_y) for path in run_dirs(f"p1-dropout-d{tag}", ("raw",))]
+        results[str(rate)] = {"train": [p[0] for p in pairs], "test": [p[1] for p in pairs]}
+    (RESULTS / "analysis" / "dropout_eval_mode.json").write_text(json.dumps(results, indent=2))
+
+    figure, axis = plt.subplots(figsize=(SINGLE, 2.15))
+    for split, color, marker, style in (("train", BLUE, "o", (0, (3.5, 1.5))), ("test", VERMILLION, "s", "-")):
+        means = [np.mean(results[str(rate)][split]) for rate in rates]
+        sds = [np.std(results[str(rate)][split]) for rate in rates]
+        axis.plot(rates, means, color=color, linewidth=0.9, linestyle=style, zorder=1)
+        axis.errorbar(rates, means, yerr=sds, fmt=marker, color=color, markersize=3.8, elinewidth=0.8, capsize=1.6,
+                      capthick=0.6, markeredgecolor="white", markeredgewidth=0.3, zorder=3)
     axis.set(xlabel="Dropout rate", ylabel="Accuracy (%)", xticks=rates, ylim=(75, 101), yticks=range(75, 101, 5))
     axis.set_xticklabels(["0", "0.1", ".25", "0.4", "0.5", "0.6", ".75"])
-    axis.legend(
-        handles=[
-            legend_key(BLUE, "o", "Train (dropout active)", (0, (3.5, 1.5))),
-            legend_key(VERMILLION, "s", "Test", "-"),
-        ],
-        loc="upper right",
-    )
+    axis.legend(handles=[legend_key(BLUE, "o", "Train", (0, (3.5, 1.5))), legend_key(VERMILLION, "s", "Test", "-")],
+                loc="center right")
     save(figure, "fig06_dropout")
 
 
@@ -663,12 +688,17 @@ def fig16_learned_filters():
     keys = list(BANDS)
     shares = np.array([[s["mean_band_share"][k] for k in keys] for s in spectra]) * 100
     flat = np.array([(BANDS[k][1] - BANDS[k][0]) / (FS / 2) * 100 for k in keys])
+    signal = dataloader.read_bci_data()[0][:, 0].astype(np.float64)
+    spectrum = (np.abs(np.fft.rfft(signal - signal.mean(axis=-1, keepdims=True), axis=-1)) ** 2).mean(axis=(0, 1))
+    bins = np.fft.rfftfreq(signal.shape[-1], d=1 / FS)
+    observed = np.array([spectrum[(bins >= BANDS[k][0]) & (bins < BANDS[k][1])].sum() for k in keys]) / spectrum.sum() * 100
     (RESULTS / "analysis").mkdir(exist_ok=True)
     (RESULTS / "analysis" / "final_model_filters.json").write_text(json.dumps(
         {"runs": [path.name for path in runs], "band_share_percent_mean": dict(zip(keys, shares.mean(axis=0).tolist())),
          "band_share_percent_min": dict(zip(keys, shares.min(axis=0).tolist())),
          "band_share_percent_max": dict(zip(keys, shares.max(axis=0).tolist())),
-         "flat_percent": dict(zip(keys, flat.tolist())), "spatial": spatial}, indent=2))
+         "flat_percent": dict(zip(keys, flat.tolist())), "input_signal_percent": dict(zip(keys, observed.tolist())),
+         "spatial": spatial}, indent=2))
 
     best = next(index for index, path in enumerate(runs) if path.name == TEST_FINAL_RUN)
     kernels = temporal[best].reshape(temporal[best].shape[0], -1)
@@ -699,14 +729,17 @@ def fig16_learned_filters():
         axes[1].plot((flat[index], shares[:, index].mean()), (position, position), color=LIGHT, linewidth=1.4, zorder=1)
         axes[1].plot(flat[index], position, marker="D", markersize=3.6, markerfacecolor="white",
                      markeredgecolor=GRAY, markeredgewidth=0.7, linestyle="none", zorder=2)
+        axes[1].plot(observed[index], position, marker="s", markersize=3.6, color=VERMILLION,
+                     markeredgecolor="white", markeredgewidth=0.3, linestyle="none", zorder=2)
         dots(axes[1], position, shares[:, index], BLUE, horizontal=True)
-    axes[1].set(xlabel="Share of kernel power (%)", xlim=(0, 56))
+    axes[1].set(xlabel="Share of power (%)", xlim=(0, 60))
     axes[1].legend(
         handles=[Line2D([], [], marker="D", markersize=3.6, markerfacecolor="white", markeredgecolor=GRAY, linestyle="none", label="Flat spectrum"),
-                 legend_key(BLUE, "o", "Learned, 5 seeds")],
-        loc="upper right",
+                 legend_key(BLUE, "o", "Learned, 5 seeds"), legend_key(VERMILLION, "s", "Input signal")],
+        loc="center right",
+        bbox_to_anchor=(1.0, 0.62),
     )
-    panel(axes[1], "(b) Band share against a flat spectrum")
+    panel(axes[1], "(b) Band share of power")
     save(figure, "fig16_learned_filters")
     print("spatial differential filters:", [s["differential_filters"] for s in spatial])
 
