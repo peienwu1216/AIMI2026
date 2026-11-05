@@ -1,0 +1,65 @@
+{
+  "per_seed_final_epoch": [
+    {
+      "seed": 17,
+      "pooled_accuracy": 87.22222222222223,
+      "two_model_accuracy": 87.22222222222223,
+      "only_first_correct": 52,
+      "only_second_correct": 52,
+      "p_value": 1.0
+    },
+    {
+      "seed": 42,
+      "pooled_accuracy": 86.57407407407408,
+      "two_model_accuracy": 88.79629629629629,
+      "only_first_correct": 40,
+      "only_second_correct": 64,
+      "p_value": 0.023645635749768214
+    },
+    {
+      "seed": 113,
+      "pooled_accuracy": 86.29629629629629,
+      "two_model_accuracy": 89.25925925925927,
+      "only_first_correct": 34,
+      "only_second_correct": 66,
+      "p_value": 0.0017899303914868528
+    },
+    {
+      "seed": 7,
+      "pooled_accuracy": 86.38888888888889,
+      "two_model_accuracy": 87.87037037037037,
+      "only_first_correct": 48,
+      "only_second_correct": 64,
+      "p_value": 0.1560663019937673
+    },
+    {
+      "seed": 2026,
+      "pooled_accuracy": 86.29629629629629,
+      "two_model_accuracy": 87.4074074074074,
+      "only_first_correct": 43,
+      "only_second_correct": 55,
+      "p_value": 0.2664055944111917
+    }
+  ],
+  "ensembles": {
+    "pooled_5_seed_vote": {
+      "accuracy": 87.68518518518519,
+      "ci95": [
+        85.59073258762811,
+        89.51250261115243
+      ]
+    },
+    "two_model_5_seed_vote": {
+      "accuracy": 88.98148148148148,
+      "ci95": [
+        86.97407456895398,
+        90.71256429759788
+      ]
+    }
+  },
+  "mcnemar_ensembles": {
+    "only_first_correct": 38,
+    "only_second_correct": 52,
+    "p_value": 0.17024239504607366
+  }
+}

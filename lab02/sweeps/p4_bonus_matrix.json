@@ -1,0 +1,30 @@
+{
+  "seeds": [17, 42, 113],
+  "base": {
+    "batch_size": 64,
+    "num_epochs": 150,
+    "weight_decay": 0.001,
+    "val_ratio": 0.2,
+    "select_by": "val_accuracy"
+  },
+  "groups": [
+    {
+      "name": "p4-deepconvnet",
+      "base": {"model": "deepconvnet", "activation": "elu", "dropout": 0.5},
+      "variants": [
+        {"label": "lr1e-2", "lr": 0.01},
+        {"label": "lr1e-3", "lr": 0.001},
+        {"label": "lr3e-4", "lr": 0.0003}
+      ]
+    },
+    {
+      "name": "p4-shallowconvnet",
+      "base": {"model": "shallowconvnet", "dropout": 0.5},
+      "variants": [
+        {"label": "lr1e-2", "lr": 0.01},
+        {"label": "lr1e-3", "lr": 0.001},
+        {"label": "lr3e-4", "lr": 0.0003}
+      ]
+    }
+  ]
+}

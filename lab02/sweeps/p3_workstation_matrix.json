@@ -1,0 +1,39 @@
+{
+  "seeds": [17, 42, 113],
+  "base": {
+    "model": "eegnet",
+    "activation": "leaky_relu",
+    "dropout": 0.5,
+    "lr": 0.001,
+    "batch_size": 64,
+    "num_epochs": 150,
+    "weight_decay": 0.001,
+    "optimizer": "adam",
+    "scheduler": "none"
+  },
+  "groups": [
+    {
+      "name": "p3",
+      "variants": [
+        {"label": "eegnet-tuned-full", "val_ratio": 0.0, "select_by": "test_accuracy"},
+        {"label": "eegnet-tuned-val", "val_ratio": 0.2, "select_by": "val_accuracy"},
+
+        {"label": "kernel15-full", "kernel_length": 15, "val_ratio": 0.0, "select_by": "test_accuracy"},
+        {"label": "kernel15-val", "kernel_length": 15, "val_ratio": 0.2, "select_by": "val_accuracy"},
+        {"label": "kernel25-full", "kernel_length": 25, "val_ratio": 0.0, "select_by": "test_accuracy"},
+        {"label": "kernel25-val", "kernel_length": 25, "val_ratio": 0.2, "select_by": "val_accuracy"},
+        {"label": "kernel33-full", "kernel_length": 33, "val_ratio": 0.0, "select_by": "test_accuracy"},
+        {"label": "kernel33-val", "kernel_length": 33, "val_ratio": 0.2, "select_by": "val_accuracy"},
+        {"label": "kernel75-full", "kernel_length": 75, "val_ratio": 0.0, "select_by": "test_accuracy"},
+        {"label": "kernel75-val", "kernel_length": 75, "val_ratio": 0.2, "select_by": "val_accuracy"},
+        {"label": "kernel101-full", "kernel_length": 101, "val_ratio": 0.0, "select_by": "test_accuracy"},
+        {"label": "kernel101-val", "kernel_length": 101, "val_ratio": 0.2, "select_by": "val_accuracy"},
+
+        {"label": "sepkernel7-full", "sep_kernel": 7, "val_ratio": 0.0, "select_by": "test_accuracy"},
+        {"label": "sepkernel7-val", "sep_kernel": 7, "val_ratio": 0.2, "select_by": "val_accuracy"},
+        {"label": "sepkernel31-full", "sep_kernel": 31, "val_ratio": 0.0, "select_by": "test_accuracy"},
+        {"label": "sepkernel31-val", "sep_kernel": 31, "val_ratio": 0.2, "select_by": "val_accuracy"}
+      ]
+    }
+  ]
+}

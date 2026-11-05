@@ -1,0 +1,114 @@
+{
+  "spearman_rho": 0.9720279720279721,
+  "spearman_p": 1.2868115751495027e-07,
+  "points": [
+    {
+      "family": "Other activations",
+      "label": "ReLU",
+      "floor": 0.0,
+      "runs": "p1-activation-tuned-relu",
+      "n": 5,
+      "mean": 85.94999999999999,
+      "sd": 0.4441588588632647
+    },
+    {
+      "family": "Other activations",
+      "label": "GELU",
+      "floor": -0.16997113823890686,
+      "runs": "p1-activation-tuned-gelu",
+      "n": 5,
+      "mean": 85.5462962962963,
+      "sd": 0.5683707130823275
+    },
+    {
+      "family": "Other activations",
+      "label": "SiLU",
+      "floor": -0.27846455574035645,
+      "runs": "p1-activation-tuned-silu",
+      "n": 5,
+      "mean": 83.77222222222221,
+      "sd": 0.700568062664318
+    },
+    {
+      "family": "Other activations",
+      "label": "Mish",
+      "floor": -0.3088434040546417,
+      "runs": "p1-activation-tuned-mish",
+      "n": 5,
+      "mean": 83.90740740740742,
+      "sd": 0.8247708248842524
+    },
+    {
+      "family": "Other activations",
+      "label": "SELU",
+      "floor": -1.7580993175506592,
+      "runs": "p1-activation-tuned-selu",
+      "n": 5,
+      "mean": 75.33888888888887,
+      "sd": 2.3079275318899035
+    },
+    {
+      "family": "ELU",
+      "label": "\u03b1=0.1",
+      "floor": -0.10000000149011612,
+      "runs": "p1-elu-alpha-a0p1",
+      "n": 5,
+      "mean": 85.50185185185185,
+      "sd": 0.49667619511946887
+    },
+    {
+      "family": "ELU",
+      "label": "\u03b1=0.25",
+      "floor": -0.25,
+      "runs": "p1-elu-alpha-a0p25",
+      "n": 5,
+      "mean": 84.75925925925927,
+      "sd": 0.1586551851155886
+    },
+    {
+      "family": "ELU",
+      "label": "\u03b1=0.5",
+      "floor": -0.5,
+      "runs": "p1-elu-alpha-a0p5",
+      "n": 5,
+      "mean": 83.77592592592593,
+      "sd": 0.9153731989076698
+    },
+    {
+      "family": "ELU",
+      "label": "\u03b1=0.75",
+      "floor": -0.75,
+      "runs": "p1-elu-alpha-a0p75",
+      "n": 5,
+      "mean": 82.94444444444443,
+      "sd": 1.3172512636670302
+    },
+    {
+      "family": "ELU",
+      "label": "\u03b1=1",
+      "floor": -1.0,
+      "runs": "p1-elu-alpha-a1p0",
+      "n": 5,
+      "mean": 81.26296296296296,
+      "sd": 1.7504124538443484
+    },
+    {
+      "family": "ELU",
+      "label": "\u03b1=1.5",
+      "floor": -1.5,
+      "runs": "p1-elu-alpha-a1p5",
+      "n": 5,
+      "mean": 76.9888888888889,
+      "sd": 2.1014430994288613
+    },
+    {
+      "family": "ELU",
+      "label": "\u03b1=2",
+      "floor": -2.0,
+      "runs": "p1-elu-alpha-a2p0",
+      "n": 5,
+      "mean": 73.44259259259259,
+      "sd": 0.8457186617721597
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+# Environment and course data
+.venv
+data
+__pycache__/
+.pytest_cache/
+*.py[cod]
+.DS_Store
+
+# Experiment outputs: keep the best checkpoint and the small summaries only
+results/raw/*
+!results/raw/final500-leaky-relu-s113/
+results/raw/final500-leaky-relu-s113/*
+!results/raw/final500-leaky-relu-s113/test_best.pt
+results/mps/
+results/mps_incomplete/
+results/local/
+results/sweep_logs/
+figures/analysis/
+weights/
+wandb/

@@ -1,0 +1,74 @@
+{
+  "runs": [
+    "final500-leaky-relu-s113",
+    "final500-leaky-relu-s17",
+    "final500-leaky-relu-s2026",
+    "final500-leaky-relu-s42",
+    "final500-leaky-relu-s511"
+  ],
+  "band_share_percent_mean": {
+    "below_4Hz": 19.15660709142685,
+    "theta_4_8": 8.923018276691437,
+    "mu_8_13": 13.430813401937485,
+    "beta_13_30": 40.05272448062897,
+    "above_30Hz": 18.30178737640381
+  },
+  "band_share_percent_min": {
+    "below_4Hz": 17.126521468162537,
+    "theta_4_8": 5.705424398183823,
+    "mu_8_13": 11.044955998659134,
+    "beta_13_30": 36.72980070114136,
+    "above_30Hz": 15.647059679031372
+  },
+  "band_share_percent_max": {
+    "below_4Hz": 21.03326767683029,
+    "theta_4_8": 11.707627773284912,
+    "mu_8_13": 16.000980138778687,
+    "beta_13_30": 43.396392464637756,
+    "above_30Hz": 21.342983841896057
+  },
+  "flat_percent": {
+    "below_4Hz": 6.4,
+    "theta_4_8": 6.4,
+    "mu_8_13": 8.0,
+    "beta_13_30": 27.200000000000003,
+    "above_30Hz": 52.0
+  },
+  "spatial": [
+    {
+      "filters": 32,
+      "differential_filters": 27,
+      "common_mode_filters": 5,
+      "mean_abs_c3": 0.16143229603767395,
+      "mean_abs_c4": 0.18102040886878967
+    },
+    {
+      "filters": 32,
+      "differential_filters": 28,
+      "common_mode_filters": 4,
+      "mean_abs_c3": 0.15827330946922302,
+      "mean_abs_c4": 0.2035927176475525
+    },
+    {
+      "filters": 32,
+      "differential_filters": 26,
+      "common_mode_filters": 6,
+      "mean_abs_c3": 0.15045401453971863,
+      "mean_abs_c4": 0.23087167739868164
+    },
+    {
+      "filters": 32,
+      "differential_filters": 26,
+      "common_mode_filters": 6,
+      "mean_abs_c3": 0.1685500144958496,
+      "mean_abs_c4": 0.2033681571483612
+    },
+    {
+      "filters": 32,
+      "differential_filters": 25,
+      "common_mode_filters": 7,
+      "mean_abs_c3": 0.17351914942264557,
+      "mean_abs_c4": 0.21209651231765747
+    }
+  ]
+}

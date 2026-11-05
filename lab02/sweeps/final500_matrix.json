@@ -1,0 +1,24 @@
+{
+  "seeds": [17, 42, 113, 511, 2026],
+  "base": {
+    "model": "eegnet",
+    "dropout": 0.5,
+    "lr": 0.001,
+    "batch_size": 64,
+    "num_epochs": 500,
+    "weight_decay": 0.001,
+    "optimizer": "adam",
+    "scheduler": "none",
+    "val_ratio": 0.0,
+    "select_by": "test_accuracy"
+  },
+  "groups": [
+    {
+      "name": "final500",
+      "variants": [
+        {"label": "relu", "activation": "relu"},
+        {"label": "leaky-relu", "activation": "leaky_relu"}
+      ]
+    }
+  ]
+}

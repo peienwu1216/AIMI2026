@@ -1,0 +1,76 @@
+{
+  "seeds": [17, 42, 113],
+  "base": {
+    "model": "eegnet",
+    "batch_size": 64,
+    "num_epochs": 150,
+    "weight_decay": 0.001,
+    "val_ratio": 0.2,
+    "select_by": "val_accuracy"
+  },
+  "groups": [
+    {
+      "name": "p1-activation-spec",
+      "base": {"dropout": 0.25, "lr": 0.01},
+      "variants": [
+        {"label": "elu", "activation": "elu"},
+        {"label": "relu", "activation": "relu"},
+        {"label": "leaky-relu", "activation": "leaky_relu"},
+        {"label": "gelu", "activation": "gelu"},
+        {"label": "silu", "activation": "silu"},
+        {"label": "selu", "activation": "selu"},
+        {"label": "mish", "activation": "mish"}
+      ]
+    },
+    {
+      "name": "p1-activation-tuned",
+      "base": {"dropout": 0.5, "lr": 0.001},
+      "variants": [
+        {"label": "elu", "activation": "elu"},
+        {"label": "relu", "activation": "relu"},
+        {"label": "leaky-relu", "activation": "leaky_relu"},
+        {"label": "gelu", "activation": "gelu"},
+        {"label": "silu", "activation": "silu"},
+        {"label": "selu", "activation": "selu"},
+        {"label": "mish", "activation": "mish"}
+      ]
+    },
+    {
+      "name": "p1-elu-alpha",
+      "base": {"activation": "elu", "dropout": 0.5, "lr": 0.001},
+      "variants": [
+        {"label": "a0p1", "elu_alpha": 0.1},
+        {"label": "a0p25", "elu_alpha": 0.25},
+        {"label": "a0p5", "elu_alpha": 0.5},
+        {"label": "a0p75", "elu_alpha": 0.75},
+        {"label": "a1p0", "elu_alpha": 1.0},
+        {"label": "a1p5", "elu_alpha": 1.5},
+        {"label": "a2p0", "elu_alpha": 2.0}
+      ]
+    },
+    {
+      "name": "p1-leaky-slope",
+      "base": {"activation": "leaky_relu", "dropout": 0.5, "lr": 0.001},
+      "variants": [
+        {"label": "s0p01", "leaky_slope": 0.01},
+        {"label": "s0p05", "leaky_slope": 0.05},
+        {"label": "s0p1", "leaky_slope": 0.1},
+        {"label": "s0p2", "leaky_slope": 0.2},
+        {"label": "s0p3", "leaky_slope": 0.3}
+      ]
+    },
+    {
+      "name": "p1-dropout",
+      "base": {"activation": "leaky_relu", "lr": 0.001},
+      "variants": [
+        {"label": "d0p0", "dropout": 0.0},
+        {"label": "d0p1", "dropout": 0.1},
+        {"label": "d0p25", "dropout": 0.25},
+        {"label": "d0p4", "dropout": 0.4},
+        {"label": "d0p5", "dropout": 0.5},
+        {"label": "d0p6", "dropout": 0.6},
+        {"label": "d0p75", "dropout": 0.75}
+      ]
+    }
+  ]
+}

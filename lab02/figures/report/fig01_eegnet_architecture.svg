@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="515.622047pt" height="127.559055pt" viewBox="0 0 515.622047 127.559055" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-05T21:43:37.008133</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 127.559055 
+L 515.622047 127.559055 
+L 515.622047 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 5.102362 93.543307 
+L 47.622047 93.543307 
+Q 50.456693 93.543307 50.456693 90.708661 
+L 50.456693 25.511811 
+Q 50.456693 22.677165 47.622047 22.677165 
+L 5.102362 22.677165 
+Q 2.267717 22.677165 2.267717 25.511811 
+L 2.267717 90.708661 
+Q 2.267717 93.543307 5.102362 93.543307 
+z
+" clip-path="url(#p33bc368525)" style="fill: #eeeeee; stroke: #555555; stroke-width: 0.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 81.637795 93.543307 
+L 163.84252 93.543307 
+Q 166.677165 93.543307 166.677165 90.708661 
+L 166.677165 25.511811 
+Q 166.677165 22.677165 163.84252 22.677165 
+L 81.637795 22.677165 
+Q 78.80315 22.677165 78.80315 25.511811 
+L 78.80315 90.708661 
+Q 78.80315 93.543307 81.637795 93.543307 
+z
+" clip-path="url(#p33bc368525)" style="fill: #d9e8f5; stroke: #555555; stroke-width: 0.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 197.858268 93.543307 
+L 294.23622 93.543307 
+Q 297.070866 93.543307 297.070866 90.708661 
+L 297.070866 25.511811 
+Q 297.070866 22.677165 294.23622 22.677165 
+L 197.858268 22.677165 
+Q 195.023622 22.677165 195.023622 25.511811 
+L 195.023622 90.708661 
+Q 195.023622 93.543307 197.858268 93.543307 
+z
+" clip-path="url(#p33bc368525)" style="fill: #cfe8df; stroke: #555555; stroke-width: 0.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 328.251969 93.543307 
+L 424.629921 93.543307 
+Q 427.464567 93.543307 427.464567 90.708661 
+L 427.464567 25.511811 
+Q 427.464567 22.677165 424.629921 22.677165 
+L 328.251969 22.677165 
+Q 325.417323 22.677165 325.417323 25.511811 
+L 325.417323 90.708661 
+Q 325.417323 93.543307 328.251969 93.543307 
+z
+" clip-path="url(#p33bc368525)" style="fill: #f7e0cf; stroke: #555555; stroke-width: 0.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 458.645669 93.543307 
+L 510.519685 93.543307 
+Q 513.354331 93.543307 513.354331 90.708661 
+L 513.354331 25.511811 
+Q 513.354331 22.677165 510.519685 22.677165 
+L 458.645669 22.677165 
+Q 455.811024 22.677165 455.811024 25.511811 
+L 455.811024 90.708661 
+Q 455.811024 93.543307 458.645669 93.543307 
+z
+" clip-path="url(#p33bc368525)" style="fill: #eeeeee; stroke: #555555; stroke-width: 0.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 54.708661 58.110236 
+Q 64.629921 58.110236 73.656754 58.110236 
+" clip-path="url(#p33bc368525)" style="fill: none; stroke: #555555; stroke-width: 0.8; stroke-linecap: round"/>
+    <path d="M 71.456754 57.010236 
+L 73.656754 58.110236 
+L 71.456754 59.210236 
+z
+" clip-path="url(#p33bc368525)" style="fill: #555555; stroke: #555555; stroke-width: 0.8; stroke-linecap: round"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 170.929134 58.110236 
+Q 180.850394 58.110236 189.877226 58.110236 
+" clip-path="url(#p33bc368525)" style="fill: none; stroke: #555555; stroke-width: 0.8; stroke-linecap: round"/>
+    <path d="M 187.677226 57.010236 
+L 189.877226 58.110236 
+L 187.677226 59.210236 
+z
+" clip-path="url(#p33bc368525)" style="fill: #555555; stroke: #555555; stroke-width: 0.8; stroke-linecap: round"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 301.322835 58.110236 
+Q 311.244094 58.110236 320.270927 58.110236 
+" clip-path="url(#p33bc368525)" style="fill: none; stroke: #555555; stroke-width: 0.8; stroke-linecap: round"/>
+    <path d="M 318.070927 57.010236 
+L 320.270927 58.110236 
+L 318.070927 59.210236 
+z
+" clip-path="url(#p33bc368525)" style="fill: #555555; stroke: #555555; stroke-width: 0.8; stroke-linecap: round"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 431.716535 58.110236 
+Q 441.637795 58.110236 450.664628 58.110236 
+" clip-path="url(#p33bc368525)" style="fill: none; stroke: #555555; stroke-width: 0.8; stroke-linecap: round"/>
+    <path d="M 448.464628 57.010236 
+L 450.664628 58.110236 
+L 448.464628 59.210236 
+z
+" clip-path="url(#p33bc368525)" style="fill: #555555; stroke: #555555; stroke-width: 0.8; stroke-linecap: round"/>
+   </g>
+   <g id="text_1">
+    <text style="font-size: 8px; font-family: 'Times New Roman', serif; text-anchor: middle; fill: #555555" x="257.811024" y="11.835479" transform="rotate(-0 257.811024 11.835479)">Total 17,874 parameters. B is the batch size.</text>
+   </g>
+   <g id="text_2">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'Times New Roman', serif; text-anchor: middle" x="26.362205" y="34.160664" transform="rotate(-0 26.362205 34.160664)">Input</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 8px; font-family: 'Times New Roman', serif; text-anchor: middle" x="26.362205" y="61.866975" transform="rotate(-0 26.362205 61.866975)">2 channels</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 8px; font-family: 'Times New Roman', serif; text-anchor: middle" x="26.362205" y="73.205557" transform="rotate(-0 26.362205 73.205557)">750 samples</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 8px; font-family: 'Times New Roman', serif; text-anchor: middle" x="26.362205" y="104.524329" transform="rotate(-0 26.362205 104.524329)">[B, 1, 2, 750]</text>
+   </g>
+   <g id="text_6">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'Times New Roman', serif; text-anchor: middle" x="122.740157" y="34.162929" transform="rotate(-0 122.740157 34.162929)">firstconv</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 8px; font-family: 'Times New Roman', serif; text-anchor: middle" x="122.740157" y="61.866975" transform="rotate(-0 122.740157 61.866975)">Conv2d 1→16, (1, 51)</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 8px; font-family: 'Times New Roman', serif; text-anchor: middle" x="122.740157" y="73.205557" transform="rotate(-0 122.740157 73.205557)">BatchNorm</text>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 8px; font-family: 'Times New Roman', serif; text-anchor: middle" x="122.740157" y="104.524329" transform="rotate(-0 122.740157 104.524329)">[B, 16, 2, 750]</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 8px; font-family: 'Times New Roman', serif; text-anchor: middle; fill: #555555" x="122.740157" y="115.295983" transform="rotate(-0 122.740157 115.295983)">848 parameters</text>
+   </g>
+   <g id="text_11">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'Times New Roman', serif; text-anchor: middle" x="246.047244" y="34.162929" transform="rotate(-0 246.047244 34.162929)">depthwiseConv</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 8px; font-family: 'Times New Roman', serif; text-anchor: middle" x="246.047244" y="50.528392" transform="rotate(-0 246.047244 50.528392)">Conv2d 16→32, (2, 1)</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 8px; font-family: 'Times New Roman', serif; text-anchor: middle" x="246.047244" y="61.866975" transform="rotate(-0 246.047244 61.866975)">groups = 16, BatchNorm</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 8px; font-family: 'Times New Roman', serif; text-anchor: middle" x="246.047244" y="73.205557" transform="rotate(-0 246.047244 73.205557)">Activation, AvgPool (1, 4)</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 8px; font-family: 'Times New Roman', serif; text-anchor: middle" x="246.047244" y="84.540078" transform="rotate(-0 246.047244 84.540078)">Dropout</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 8px; font-family: 'Times New Roman', serif; text-anchor: middle" x="246.047244" y="104.524329" transform="rotate(-0 246.047244 104.524329)">[B, 32, 1, 187]</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 8px; font-family: 'Times New Roman', serif; text-anchor: middle; fill: #555555" x="246.047244" y="115.295983" transform="rotate(-0 246.047244 115.295983)">128 parameters</text>
+   </g>
+   <g id="text_18">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'Times New Roman', serif; text-anchor: middle" x="376.440945" y="34.160664" transform="rotate(-0 376.440945 34.160664)">separableConv</text>
+   </g>
+   <g id="text_19">
+    <text style="font-size: 8px; font-family: 'Times New Roman', serif; text-anchor: middle" x="376.440945" y="50.528392" transform="rotate(-0 376.440945 50.528392)">Conv2d 32→32, (1, 15)</text>
+   </g>
+   <g id="text_20">
+    <text style="font-size: 8px; font-family: 'Times New Roman', serif; text-anchor: middle" x="376.440945" y="61.866975" transform="rotate(-0 376.440945 61.866975)">BatchNorm</text>
+   </g>
+   <g id="text_21">
+    <text style="font-size: 8px; font-family: 'Times New Roman', serif; text-anchor: middle" x="376.440945" y="73.205557" transform="rotate(-0 376.440945 73.205557)">Activation, AvgPool (1, 8)</text>
+   </g>
+   <g id="text_22">
+    <text style="font-size: 8px; font-family: 'Times New Roman', serif; text-anchor: middle" x="376.440945" y="84.540078" transform="rotate(-0 376.440945 84.540078)">Dropout</text>
+   </g>
+   <g id="text_23">
+    <text style="font-size: 8px; font-family: 'Times New Roman', serif; text-anchor: middle" x="376.440945" y="104.524329" transform="rotate(-0 376.440945 104.524329)">[B, 32, 1, 23]</text>
+   </g>
+   <g id="text_24">
+    <text style="font-size: 8px; font-family: 'Times New Roman', serif; text-anchor: middle; fill: #555555" x="376.440945" y="115.295983" transform="rotate(-0 376.440945 115.295983)">15,424 parameters</text>
+   </g>
+   <g id="text_25">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'Times New Roman', serif; text-anchor: middle" x="484.582677" y="34.162929" transform="rotate(-0 484.582677 34.162929)">classify</text>
+   </g>
+   <g id="text_26">
+    <text style="font-size: 8px; font-family: 'Times New Roman', serif; text-anchor: middle" x="484.582677" y="61.866975" transform="rotate(-0 484.582677 61.866975)">Flatten</text>
+   </g>
+   <g id="text_27">
+    <text style="font-size: 8px; font-family: 'Times New Roman', serif; text-anchor: middle" x="484.582677" y="73.205557" transform="rotate(-0 484.582677 73.205557)">Linear 736→2</text>
+   </g>
+   <g id="text_28">
+    <text style="font-size: 8px; font-family: 'Times New Roman', serif; text-anchor: middle" x="484.582677" y="104.524329" transform="rotate(-0 484.582677 104.524329)">[B, 2]</text>
+   </g>
+   <g id="text_29">
+    <text style="font-size: 8px; font-family: 'Times New Roman', serif; text-anchor: middle; fill: #555555" x="484.582677" y="115.295983" transform="rotate(-0 484.582677 115.295983)">1,474 param.</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p33bc368525">
+   <rect x="0" y="0" width="515.622047" height="127.559055"/>
+  </clipPath>
+ </defs>
+</svg>

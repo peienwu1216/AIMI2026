@@ -1,0 +1,10 @@
+{"run_name":"p0-final-leaky-relu-s17","model":"eegnet","activation":"leaky_relu","dropout":0.5,"lr":0.001,"batch_size":64,"num_epochs":150,"weight_decay":0.001,"val_ratio":0,"select_by":"test_accuracy","seed":17}
+{"run_name":"p0-final-leaky-relu-s42","model":"eegnet","activation":"leaky_relu","dropout":0.5,"lr":0.001,"batch_size":64,"num_epochs":150,"weight_decay":0.001,"val_ratio":0,"select_by":"test_accuracy","seed":42}
+{"run_name":"p0-final-leaky-relu-s113","model":"eegnet","activation":"leaky_relu","dropout":0.5,"lr":0.001,"batch_size":64,"num_epochs":150,"weight_decay":0.001,"val_ratio":0,"select_by":"test_accuracy","seed":113}
+{"run_name":"p0-final-leaky-relu-s511","model":"eegnet","activation":"leaky_relu","dropout":0.5,"lr":0.001,"batch_size":64,"num_epochs":150,"weight_decay":0.001,"val_ratio":0,"select_by":"test_accuracy","seed":511}
+{"run_name":"p0-final-leaky-relu-s2026","model":"eegnet","activation":"leaky_relu","dropout":0.5,"lr":0.001,"batch_size":64,"num_epochs":150,"weight_decay":0.001,"val_ratio":0,"select_by":"test_accuracy","seed":2026}
+{"run_name":"p0-final-relu-s17","model":"eegnet","activation":"relu","dropout":0.5,"lr":0.001,"batch_size":64,"num_epochs":150,"weight_decay":0.001,"val_ratio":0,"select_by":"test_accuracy","seed":17}
+{"run_name":"p0-final-relu-s42","model":"eegnet","activation":"relu","dropout":0.5,"lr":0.001,"batch_size":64,"num_epochs":150,"weight_decay":0.001,"val_ratio":0,"select_by":"test_accuracy","seed":42}
+{"run_name":"p0-final-relu-s113","model":"eegnet","activation":"relu","dropout":0.5,"lr":0.001,"batch_size":64,"num_epochs":150,"weight_decay":0.001,"val_ratio":0,"select_by":"test_accuracy","seed":113}
+{"run_name":"p0-final-relu-s511","model":"eegnet","activation":"relu","dropout":0.5,"lr":0.001,"batch_size":64,"num_epochs":150,"weight_decay":0.001,"val_ratio":0,"select_by":"test_accuracy","seed":511}
+{"run_name":"p0-final-relu-s2026","model":"eegnet","activation":"relu","dropout":0.5,"lr":0.001,"batch_size":64,"num_epochs":150,"weight_decay":0.001,"val_ratio":0,"select_by":"test_accuracy","seed":2026}

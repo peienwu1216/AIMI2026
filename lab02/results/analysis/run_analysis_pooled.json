@@ -1,0 +1,324 @@
+{
+  "runs": [
+    {
+      "run": "scope-all-full-s17",
+      "accuracy": 87.77777777777777,
+      "ci95": [
+        85.68929953392576,
+        89.59846449826702
+      ],
+      "n": 1080,
+      "per_subject": {
+        "S4": 88.33333333333333,
+        "X11": 87.22222222222223
+      },
+      "per_class_recall": {
+        "class_0": 88.88888888888889,
+        "class_1": 86.66666666666667
+      },
+      "temporal_filters": {
+        "peak_frequency_hz": [
+          0.0,
+          10.74,
+          22.71,
+          19.29,
+          22.46,
+          21.24,
+          1.95,
+          13.18,
+          11.72,
+          26.86,
+          0.0,
+          2.69,
+          18.31,
+          9.28,
+          25.88,
+          24.41
+        ],
+        "mean_band_share": {
+          "below_4Hz": 0.1401832401752472,
+          "theta_4_8": 0.061464522033929825,
+          "mu_8_13": 0.11453123390674591,
+          "beta_13_30": 0.4222826659679413,
+          "above_30Hz": 0.26020950078964233
+        },
+        "dominant_band_count": {
+          "below_4Hz": 4,
+          "theta_4_8": 0,
+          "mu_8_13": 2,
+          "beta_13_30": 9,
+          "above_30Hz": 1
+        }
+      },
+      "spatial_filters": {
+        "filters": 32,
+        "differential_filters": 24,
+        "common_mode_filters": 8,
+        "mean_abs_c3": 0.1746772825717926,
+        "mean_abs_c4": 0.234209805727005
+      }
+    },
+    {
+      "run": "scope-all-full-s42",
+      "accuracy": 87.87037037037037,
+      "ci95": [
+        85.7879024101119,
+        89.6843904554931
+      ],
+      "n": 1080,
+      "per_subject": {
+        "S4": 88.33333333333333,
+        "X11": 87.4074074074074
+      },
+      "per_class_recall": {
+        "class_0": 83.33333333333334,
+        "class_1": 92.4074074074074
+      },
+      "temporal_filters": {
+        "peak_frequency_hz": [
+          0.49,
+          23.93,
+          1.46,
+          11.72,
+          0.0,
+          2.69,
+          2.93,
+          22.46,
+          21.48,
+          8.79,
+          9.77,
+          0.0,
+          26.37,
+          0.0,
+          31.25,
+          17.33
+        ],
+        "mean_band_share": {
+          "below_4Hz": 0.1876273900270462,
+          "theta_4_8": 0.06893044710159302,
+          "mu_8_13": 0.09827989339828491,
+          "beta_13_30": 0.35845497250556946,
+          "above_30Hz": 0.28423160314559937
+        },
+        "dominant_band_count": {
+          "below_4Hz": 4,
+          "theta_4_8": 1,
+          "mu_8_13": 2,
+          "beta_13_30": 7,
+          "above_30Hz": 2
+        }
+      },
+      "spatial_filters": {
+        "filters": 32,
+        "differential_filters": 25,
+        "common_mode_filters": 7,
+        "mean_abs_c3": 0.18885627388954163,
+        "mean_abs_c4": 0.2578597664833069
+      }
+    },
+    {
+      "run": "scope-all-full-s113",
+      "accuracy": 86.29629629629629,
+      "ci95": [
+        84.11631926307645,
+        88.21898343452054
+      ],
+      "n": 1080,
+      "per_subject": {
+        "S4": 86.11111111111111,
+        "X11": 86.48148148148148
+      },
+      "per_class_recall": {
+        "class_0": 84.81481481481481,
+        "class_1": 87.77777777777777
+      },
+      "temporal_filters": {
+        "peak_frequency_hz": [
+          0.0,
+          5.13,
+          10.74,
+          10.74,
+          8.79,
+          23.93,
+          8.06,
+          0.0,
+          10.01,
+          21.97,
+          0.0,
+          4.15,
+          2.93,
+          26.37,
+          21.24,
+          21.48
+        ],
+        "mean_band_share": {
+          "below_4Hz": 0.15186497569084167,
+          "theta_4_8": 0.07745468616485596,
+          "mu_8_13": 0.13611572980880737,
+          "beta_13_30": 0.3657725751399994,
+          "above_30Hz": 0.266098290681839
+        },
+        "dominant_band_count": {
+          "below_4Hz": 5,
+          "theta_4_8": 0,
+          "mu_8_13": 2,
+          "beta_13_30": 6,
+          "above_30Hz": 3
+        }
+      },
+      "spatial_filters": {
+        "filters": 32,
+        "differential_filters": 25,
+        "common_mode_filters": 7,
+        "mean_abs_c3": 0.18106475472450256,
+        "mean_abs_c4": 0.21717703342437744
+      }
+    },
+    {
+      "run": "scope-all-full-s7",
+      "accuracy": 86.66666666666667,
+      "ci95": [
+        84.508773105822,
+        88.56464492542393
+      ],
+      "n": 1080,
+      "per_subject": {
+        "S4": 87.77777777777777,
+        "X11": 85.55555555555556
+      },
+      "per_class_recall": {
+        "class_0": 86.29629629629629,
+        "class_1": 87.03703703703704
+      },
+      "temporal_filters": {
+        "peak_frequency_hz": [
+          11.47,
+          21.24,
+          0.0,
+          3.17,
+          8.79,
+          0.98,
+          24.17,
+          0.0,
+          3.17,
+          26.37,
+          10.5,
+          0.0,
+          10.74,
+          9.03,
+          21.97,
+          0.0
+        ],
+        "mean_band_share": {
+          "below_4Hz": 0.15785656869411469,
+          "theta_4_8": 0.0826321542263031,
+          "mu_8_13": 0.1405171900987625,
+          "beta_13_30": 0.3084533214569092,
+          "above_30Hz": 0.30741000175476074
+        },
+        "dominant_band_count": {
+          "below_4Hz": 3,
+          "theta_4_8": 0,
+          "mu_8_13": 3,
+          "beta_13_30": 4,
+          "above_30Hz": 6
+        }
+      },
+      "spatial_filters": {
+        "filters": 32,
+        "differential_filters": 23,
+        "common_mode_filters": 9,
+        "mean_abs_c3": 0.22364450991153717,
+        "mean_abs_c4": 0.24736542999744415
+      }
+    },
+    {
+      "run": "scope-all-full-s2026",
+      "accuracy": 86.94444444444444,
+      "ci95": [
+        84.80345034043458,
+        88.82355419104807
+      ],
+      "n": 1080,
+      "per_subject": {
+        "S4": 87.77777777777777,
+        "X11": 86.11111111111111
+      },
+      "per_class_recall": {
+        "class_0": 83.7037037037037,
+        "class_1": 90.18518518518519
+      },
+      "temporal_filters": {
+        "peak_frequency_hz": [
+          9.77,
+          21.97,
+          24.17,
+          26.86,
+          24.9,
+          3.17,
+          9.03,
+          0.49,
+          0.0,
+          8.54,
+          1.22,
+          1.95,
+          10.74,
+          0.0,
+          20.51,
+          23.93
+        ],
+        "mean_band_share": {
+          "below_4Hz": 0.14802685379981995,
+          "theta_4_8": 0.052810780704021454,
+          "mu_8_13": 0.12307870388031006,
+          "beta_13_30": 0.3540758788585663,
+          "above_30Hz": 0.3199279308319092
+        },
+        "dominant_band_count": {
+          "below_4Hz": 3,
+          "theta_4_8": 0,
+          "mu_8_13": 2,
+          "beta_13_30": 6,
+          "above_30Hz": 5
+        }
+      },
+      "spatial_filters": {
+        "filters": 32,
+        "differential_filters": 23,
+        "common_mode_filters": 9,
+        "mean_abs_c3": 0.17541703581809998,
+        "mean_abs_c4": 0.2871722877025604
+      }
+    }
+  ],
+  "mcnemar_vs_first": [
+    {
+      "first": "scope-all-full-s17",
+      "second": "scope-all-full-s42",
+      "only_first_correct": 40,
+      "only_second_correct": 41,
+      "p_value": 1.0
+    },
+    {
+      "first": "scope-all-full-s17",
+      "second": "scope-all-full-s113",
+      "only_first_correct": 52,
+      "only_second_correct": 36,
+      "p_value": 0.1092954297773143
+    },
+    {
+      "first": "scope-all-full-s17",
+      "second": "scope-all-full-s7",
+      "only_first_correct": 42,
+      "only_second_correct": 30,
+      "p_value": 0.1945051658673991
+    },
+    {
+      "first": "scope-all-full-s17",
+      "second": "scope-all-full-s2026",
+      "only_first_correct": 44,
+      "only_second_correct": 35,
+      "p_value": 0.3681876338306311
+    }
+  ]
+}

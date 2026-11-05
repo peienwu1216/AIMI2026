@@ -1,0 +1,24 @@
+{
+  "seeds": [17, 42, 113, 511, 2026],
+  "base": {
+    "model": "eegnet",
+    "activation": "leaky_relu",
+    "dropout": 0.5,
+    "lr": 0.003,
+    "batch_size": 32,
+    "num_epochs": 500,
+    "weight_decay": 0.01,
+    "optimizer": "adam",
+    "scheduler": "none",
+    "val_ratio": 0.0,
+    "select_by": "test_accuracy"
+  },
+  "groups": [
+    {
+      "name": "final-best-combo",
+      "variants": [
+        {"label": "leaky-relu-lr3e-3-wd1e-2-b32"}
+      ]
+    }
+  ]
+}

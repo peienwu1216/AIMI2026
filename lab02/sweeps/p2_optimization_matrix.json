@@ -1,0 +1,62 @@
+{
+  "seeds": [17, 42, 113],
+  "base": {
+    "model": "eegnet",
+    "activation": "leaky_relu",
+    "dropout": 0.5,
+    "lr": 0.001,
+    "batch_size": 64,
+    "num_epochs": 150,
+    "weight_decay": 0.001,
+    "optimizer": "adam",
+    "scheduler": "none",
+    "val_ratio": 0.2,
+    "select_by": "val_accuracy"
+  },
+  "groups": [
+    {
+      "name": "p2-learning-rate",
+      "variants": [
+        {"label": "lr3e-4", "lr": 0.0003},
+        {"label": "lr1e-3", "lr": 0.001},
+        {"label": "lr3e-3", "lr": 0.003},
+        {"label": "lr1e-2", "lr": 0.01},
+        {"label": "lr3e-2", "lr": 0.03}
+      ]
+    },
+    {
+      "name": "p2-batch-size",
+      "variants": [
+        {"label": "b32", "batch_size": 32},
+        {"label": "b64", "batch_size": 64},
+        {"label": "b128", "batch_size": 128}
+      ]
+    },
+    {
+      "name": "p2-weight-decay",
+      "variants": [
+        {"label": "wd0", "weight_decay": 0.0},
+        {"label": "wd1e-4", "weight_decay": 0.0001},
+        {"label": "wd1e-3", "weight_decay": 0.001},
+        {"label": "wd1e-2", "weight_decay": 0.01}
+      ]
+    },
+    {
+      "name": "p2-epochs-schedule",
+      "variants": [
+        {"label": "e150-constant", "num_epochs": 150, "scheduler": "none"},
+        {"label": "e300-constant", "num_epochs": 300, "scheduler": "none"},
+        {"label": "e500-constant", "num_epochs": 500, "scheduler": "none"},
+        {"label": "e300-cosine", "num_epochs": 300, "scheduler": "cosine"}
+      ]
+    },
+    {
+      "name": "p2-optimizer",
+      "variants": [
+        {"label": "adam", "optimizer": "adam"},
+        {"label": "adamw", "optimizer": "adamw"},
+        {"label": "sgd", "optimizer": "sgd"}
+      ]
+    }
+  ]
+}
